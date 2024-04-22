@@ -8,14 +8,16 @@ Actualmente sin mantenimiento debido al éxito de la competencia. Si quieres hac
   - [TODO.md](TODO.md)
 
 ## Instrucciones de uso
+* Instalar Dependencias
+
+```
+pip install -r requirements.txt
+```
+
 Aplicación desarrollada en Python (v3.11) con Flask como dependencia principal.
-    * Instalar Dependencias
 
-    ```
-    pip install -r requirements.txt
-    ```
-
-
+    export MONGO_IP="localhost"
+    export MONGO_PORT="27017"
     python app.py
 
 Desplegará un servidor web en [http://127.0.0.1:5000](http://127.0.0.1:5000)
