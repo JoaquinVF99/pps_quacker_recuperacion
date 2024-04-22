@@ -8,18 +8,23 @@ Actualmente sin mantenimiento debido al éxito de la competencia. Si quieres hac
   - [TODO.md](TODO.md)
 
 ## Instrucciones de uso
-* Instalar Dependencias
+* Editar dockerfile con las variables correctas
 
+* Crear Red de docker
 ```
-pip install -r requirements.txt
+docker network create quacker-mongo
 ```
 
-Aplicación desarrollada en Python (v3.11) con Flask como dependencia principal.
-
-    export MONGO_IP="localhost"
-    export MONGO_PORT="27017"
-    python app.py
-
+* Crear imagen
+```
+docker build quacker .
+```
+* Correr los contenedores
+```docker run --network=quacker-mongo --name quacker -it -p 5000:5000 quacker
+```
+```
+docker run --network=quacker-mongo --name mongo -d -p 27017:27017 mongo
+```
 Desplegará un servidor web en [http://127.0.0.1:5000](http://127.0.0.1:5000)
 
 En el index se mostrará una tabla con los quacks de todos los usuarios, pero cuenta con una API que puedes utilizar para integrarla con tu propia aplicación o para desarrollar tu propio frontend.
