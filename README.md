@@ -9,6 +9,12 @@ Actualmente sin mantenimiento debido al éxito de la competencia. Si quieres hac
 
 ## Instrucciones de uso
 Aplicación desarrollada en Python (v3.11) con Flask como dependencia principal.
+    * Instalar Dependencias
+
+    ```
+    pip install -r requirements.txt
+    ```
+
 
     python app.py
 
